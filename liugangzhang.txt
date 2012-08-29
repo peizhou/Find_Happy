@@ -1,0 +1,2 @@
+Dear Gang:
+	This is our github of our project!Please try to connect it and clone to your local!

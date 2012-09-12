@@ -1,8 +1,8 @@
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: http://doc.scrapy.org/topics/item-pipeline.html
-
+#coding:utf-8
+import pymongo
 class FindhappyPipeline(object):
     def process_item(self, item, spider):
-        return item
+        conn=pymongo.Connection('127.0.0.1',27017)
+        db=conn["happy"]
+        collection=db["sentences"]
+        collection.insert(dict(item))

@@ -1,3 +1,0 @@
-Dear Gang:
-	This is our github for our project!Please try to connect it and clone to your local!
-							Peizhou 8.29.2012

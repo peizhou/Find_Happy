@@ -13,7 +13,7 @@ class spider(CrawlSpider):
     allowed_domains = ["caoegg.cn"]
     start_urls = ['http://www.caoegg.cn/']
     rules=(
-        Rule(SgmlLinkExtractor(allow='page=\d',)),
+        Rule(SgmlLinkExtractor(allow='page=\d',restrict_xpaths=u'//*[@id="paging"]/a[contains(text(),"后一页")]')),
         Rule(SgmlLinkExtractor(allow='view/\d',),callback='parse_item')
     )
     def parse_item(self, response):
